@@ -29,15 +29,7 @@ if (ENV.NODE_ENV === "production") {
   });
 }
 
-// Connect to database
-connectDB();
-
-// Export for Vercel serverless functions
-export default app;
-
-// Only start server if not in Vercel environment
-if (process.env.NODE_ENV !== "production" || !process.env.VERCEL) {
-  server.listen(PORT, () => {
-    console.log("Server running on port: " + PORT);
-  });
-}
+server.listen(PORT, () => {
+  console.log("Server running on port: " + PORT);
+  connectDB();
+});
