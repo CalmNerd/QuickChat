@@ -18,7 +18,7 @@ app.use(express.json({ limit: "5mb" }));
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:3000",
-  "https://quick-chat-delta-ten.vercel.app",
+  "https://quick-chat-theta-one.vercel.app",
   ENV.CLIENT_URL
 ].filter(Boolean);
 
